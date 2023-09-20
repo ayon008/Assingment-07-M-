@@ -1,0 +1,15 @@
+.cart {
+    background-color: white;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.credit-remaining {
+    color: #2F80ED;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}

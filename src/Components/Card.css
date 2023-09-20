@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-body p {
+    color: rgba(28, 27, 27, 0.60);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn button {
+    width: 100%;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid #2F80ED;
+    background: #2F80ED;
+}
