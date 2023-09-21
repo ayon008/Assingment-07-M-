@@ -24,7 +24,7 @@ const Card = props => {
                 </div>
             </div>
             <div className="btn">
-                <button onClick={() =>buttonFunction(props.product)}>Select</button>
+                <button onClick={() => buttonFunction(props.product)}>Select</button>
             </div>
         </div>
     );

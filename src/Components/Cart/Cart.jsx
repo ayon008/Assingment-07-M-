@@ -1,5 +1,7 @@
 import React from 'react';
 import './Cart.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = props => {
     const carts = props.cart;
@@ -14,13 +16,16 @@ const Cart = props => {
         credit = credit + parseInt(cart.credit);
         price = price + parseInt(cart.price);
     }
-
-
-
-
+    let hour = 20 - credit;
+    const notify = (hour, credit) => {
+        if (credit >= 20 && hour <= 0) {
+            toast(" ⚠️ You Can't take more than 20 credits");
+        }
+    };
+    notify(hour, credit);
     return (
         <div className='cart'>
-            <h3 className='credit-remaining'>Credit Hour Remaining 7 hr</h3>
+            <h3 className='credit-remaining'>Credit Hour Remaining {hour} hr</h3>
             <hr />
             <h3>Course Name</h3>
             {name}
@@ -28,6 +33,7 @@ const Cart = props => {
             <h4>Total Credit Hour : {credit}</h4>
             <hr />
             <h4>Total Price : {price} USD</h4>
+            <ToastContainer />
         </div>
     );
 };

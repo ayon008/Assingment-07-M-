@@ -3,6 +3,8 @@
     padding: 15px;
     margin-top: 30px;
     border-radius: 8px;
+    position: sticky;
+    top: 0;
 }
 
 .credit-remaining {
