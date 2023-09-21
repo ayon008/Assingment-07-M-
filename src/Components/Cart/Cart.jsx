@@ -17,12 +17,16 @@ const Cart = props => {
         price = price + parseInt(cart.price);
     }
     let hour = 20 - credit;
-    const notify = (hour, credit) => {
-        if (credit >= 20 && hour <= 0) {
-            toast(" ⚠️ You Can't take more than 20 credits");
-        }
-    };
-    notify(hour, credit);
+    const notify = () => toast(" ⚠️ You Can't take more than 20 credits");
+    if (credit > 20 && hour < 0) {
+        name = '';
+        count = 0;
+        price = 0;
+        credit = 0;
+        hour = 0;
+        notify();
+    }
+
     return (
         <div className='cart'>
             <h3 className='credit-remaining'>Credit Hour Remaining {hour} hr</h3>
